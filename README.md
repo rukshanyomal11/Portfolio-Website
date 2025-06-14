@@ -62,37 +62,36 @@ This portfolio serves as a professional showcase and includes the following sect
 
 my-portfolio/
 ├── public/
-│   ├── assets/
-│   │   └── images/
-│   │       ├── blood.jpg
-│   │       ├── conference.png
-│   │       ├── logo3.jpeg
-│   │       ├── portfolio.jpg
-│   │       └── profile.jpeg
-│   └── vite.svg
+│ ├── assets/
+│ │ └── images/
+│ │ ├── blood.jpg
+│ │ ├── conference.png
+│ │ ├── logo3.jpeg
+│ │ ├── portfolio.jpg
+│ │ └── profile.jpeg
+│ └── vite.svg
 │
 ├── src/
-│   ├── assets/                 # For any additional styles or resources
-│   ├── components/             # Reusable UI components
-│   │   ├── AboutSection.jsx
-│   │   ├── ContactSection.jsx
-│   │   ├── HomeSection.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProjectCard.jsx
-│   │   └── ProjectsSection.jsx
-│   ├── pages/                  # Optional: add route-level pages if needed
-│   ├── App.css                 # Custom global styles (if needed)
-│   ├── App.jsx                 # Main app component with router
-│   ├── index.css               # Tailwind directives and base styles
-│   ├── main.jsx                # Entry point for Vite + React
+│ ├── assets/
+│ ├── components/
+│ │ ├── AboutSection.jsx
+│ │ ├── ContactSection.jsx
+│ │ ├── HomeSection.jsx
+│ │ ├── Navbar.jsx
+│ │ ├── ProjectCard.jsx
+│ │ └── ProjectsSection.jsx
+│ ├── pages/
+│ ├── App.css
+│ ├── App.jsx
+│ ├── index.css
+│ ├── main.jsx
 │
-├── index.html                  # Vite template HTML
-├── tailwind.config.js          # Tailwind configuration
-├── postcss.config.js           # PostCSS setup for Tailwind
-├── package.json                # Project dependencies and scripts
+├── index.html
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
 ├── package-lock.json
 ├── .gitignore
-├── .eslintrc.js                # ESLint rules (optional)
-├── README.md                   # This file
-
+├── .eslintrc.js
+├── README.md
 
