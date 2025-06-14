@@ -54,7 +54,7 @@ This portfolio serves as a professional showcase and includes the following sect
 - **Frontend:** React.js (Vite)
 - **Styling:** Tailwind CSS
 - **Routing:** React Router DOM
-- **Deployment:** Netlify / Vercel / GitHub Pages
+- **Deployment:** Vercel / GitHub Pages
 
 ---
 
