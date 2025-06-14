@@ -18,7 +18,7 @@ export default function ProjectsSection() {
       technologies: ["HTML", "PHP", "JavaScript", "CSS", "MySQL"],
       githubLink:
         "https://github.com/rukshanyomal11/BloodUnity-Blood-Donation-Management-System.git",
-      image: "/assets/images/blood.jpg",
+      image: "/assets/images/blood.png",
     },
     {
       title: "💼 Portfolio Website",
@@ -27,7 +27,7 @@ export default function ProjectsSection() {
       technologies: ["React", "Tailwind CSS", "JavaScript"],
       githubLink:
         "https://github.com/rukshanyomal11/React-Portfolio-Website-with-HCI-Principles.git",
-      image: "/assets/images/portfolio.jpg",
+      image: "/assets/images/portfolio.png",
     },
   ];
 
