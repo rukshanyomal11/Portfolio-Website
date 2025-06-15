@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="mt-4 text-blue-200 max-w-sm">
-              Passionate about creating innovative web solutions that bridge design and functionality.
+              Believe in yourself and the world will believe too.
             </p>
           </div>
 

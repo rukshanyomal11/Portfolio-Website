@@ -229,9 +229,9 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 border border-blue-100 shadow-2xl hover:shadow-3xl transition-all duration-300">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Let’s Talk</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                I'm open to new opportunities, collaborations, or a quick chat about tech. Feel free to reach out anytime!
+                "Keen to explore new opportunities, brainstorm ideas, or geek out over tech? Let’s chat—drop me a message anytime!"
               </p>
               <div className="space-y-6">
                 {contactMethods.map((method, i) => (
