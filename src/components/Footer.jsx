@@ -53,7 +53,7 @@ export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-blue-900 dark:bg-gray-900 text-white transition-colors duration-300">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -66,10 +66,10 @@ export default function Footer() {
               />
               <div>
                 <h3 className="text-2xl font-bold">Yomal Rukshan</h3>
-                <p className="text-sm text-blue-300">Full-Stack Developer</p>
+                <p className="text-sm text-blue-300 dark:text-gray-400">Full-Stack Developer</p>
               </div>
             </div>
-            <p className="mt-4 text-blue-200 max-w-sm">
+            <p className="mt-4 text-blue-200 dark:text-gray-300 max-w-sm">
               Believe in yourself and the world will believe too.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-blue-300 hover:text-white transition duration-200"
+                    className="text-blue-300 dark:text-gray-400 hover:text-white transition duration-200"
                   >
                     {link.name}
                   </button>
@@ -94,7 +94,7 @@ export default function Footer() {
           {/* Contact & Social */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
-            <div className="space-y-3 text-blue-300 text-sm">
+            <div className="space-y-3 text-blue-300 dark:text-gray-400 text-sm">
               <p>Walasmulla, Southern Province, LK</p>
               <p>rukshanyomal11@gmail.com</p>
               <p>+94 71 341 2404</p>
@@ -106,7 +106,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 hover:bg-blue-600 transition-colors"
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-700 dark:bg-gray-700 hover:bg-blue-600 dark:hover:bg-gray-600 transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -116,9 +116,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-blue-700 mb-6" />
+        <hr className="border-blue-700 dark:border-gray-700 mb-6" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-blue-300 text-sm space-y-2 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center text-blue-300 dark:text-gray-400 text-sm space-y-2 md:space-y-0">
           <div>
             © {new Date().getFullYear()} Yomal Rukshan.
           </div>

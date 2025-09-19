@@ -32,9 +32,9 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50" id="projects">
+    <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" id="projects">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12 transition-colors duration-300">
           Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

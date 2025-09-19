@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar({ activeSection, setActiveSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
   };
 
   return (
-    <nav className="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50 transition-all duration-300">
+    <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-md sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo + Brand */}
         <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -23,33 +24,37 @@ export default function Navbar({ activeSection, setActiveSection }) {
             alt="Logo"
             className="h-10 w-10 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
           />
-          <span className="text-xl font-bold text-blue-500  tracking-wide hover:text-gray-800 transition-colors duration-300">
+          <span className="text-xl font-bold text-blue-500 dark:text-blue-400 tracking-wide hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300">
             YOMAL 
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 font-medium">
+        <div className="hidden md:flex items-center space-x-6 font-medium">
           {['home', 'about', 'projects', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => scrollToSection(section)}
               className={`capitalize px-3 py-2 rounded-lg transition-all duration-300 ${
                 activeSection === section
-                  ? 'text-blue-600 bg-blue-100 shadow-sm'
-                  : 'text-gray-600 hover:text-blue-600 hover:bg-gray-100'
+                  ? 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700/50'
               }`}
             >
               {section}
             </button>
           ))}
+          
+          {/* Theme Toggle */}
+          <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
+        {/* Mobile Menu Icon + Theme Toggle */}
+        <div className="md:hidden flex items-center space-x-3">
+          <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-600 hover:text-blue-600 focus:outline-none"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none"
           >
             {isMenuOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
           </button>
@@ -58,15 +63,15 @@ export default function Navbar({ activeSection, setActiveSection }) {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-inner px-6 py-4 space-y-2 transition-all duration-300">
+        <div className="md:hidden bg-white dark:bg-gray-900 shadow-inner px-6 py-4 space-y-2 transition-all duration-300">
           {['home', 'about', 'projects', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className={`block w-full text-left text-base font-medium rounded-md px-4 py-2 ${
+              className={`block w-full text-left text-base font-medium rounded-md px-4 py-2 transition-all duration-300 ${
                 activeSection === section
-                  ? 'text-blue-600 bg-blue-100'
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-100'
+                  ? 'text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700/50'
               }`}
             >
               {section}

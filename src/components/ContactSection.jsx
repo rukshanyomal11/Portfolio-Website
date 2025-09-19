@@ -113,17 +113,17 @@ export default function ContactSection() {
 
   return (
     <section
-      className="min-h-screen py-20 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden"
+      className="min-h-screen py-20 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden transition-colors duration-300"
       id="contact"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
             Contact <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Me</span>
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Whether it’s a project or just a chat, feel free to connect. Let’s make something awesome together!
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto transition-colors duration-300">
+            Whether it's a project or just a chat, feel free to connect. Let's make something awesome together!
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mt-6 rounded-full"></div>
         </div>
@@ -131,12 +131,12 @@ export default function ContactSection() {
         {/* Main content */}
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 border border-blue-100 shadow-2xl transition-all duration-300 hover:shadow-3xl">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
+          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl p-8 border border-blue-100 dark:border-gray-700 shadow-2xl dark:shadow-xl dark:shadow-gray-900/20 transition-all duration-300 hover:shadow-3xl">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Send a Message</h2>
             
             {/* Success Message */}
             {submitted && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center text-green-600">
+              <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg flex items-center text-green-600 dark:text-green-400 transition-colors duration-300">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
@@ -146,7 +146,7 @@ export default function ContactSection() {
 
             {/* Error Message */}
             {error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center text-red-600">
+              <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded-lg flex items-center text-red-600 dark:text-red-400 transition-colors duration-300">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -157,50 +157,50 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block mb-2 font-medium text-gray-700">Name *</label>
+                  <label className="block mb-2 font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">Name *</label>
                   <input
                     name="name"
                     type="text"
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 border border-blue-100 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 focus:border-blue-400 dark:focus:border-blue-500 outline-none transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 font-medium text-gray-700">Email *</label>
+                  <label className="block mb-2 font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">Email *</label>
                   <input
                     name="email"
                     type="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 border border-blue-100 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 focus:border-blue-400 dark:focus:border-blue-500 outline-none transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
               <div>
-                <label className="block mb-2 font-medium text-gray-700">Subject</label>
+                <label className="block mb-2 font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">Subject</label>
                 <input
                   name="subject"
                   type="text"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                  className="w-full px-4 py-3 border border-blue-100 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 focus:border-blue-400 dark:focus:border-blue-500 outline-none transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="What's this about?"
                 />
               </div>
               <div>
-                <label className="block mb-2 font-medium text-gray-700">Message *</label>
+                <label className="block mb-2 font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">Message *</label>
                 <textarea
                   name="message"
                   rows={5}
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 border border-blue-100 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 focus:border-blue-400 dark:focus:border-blue-500 outline-none transition-all duration-200 resize-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -228,10 +228,10 @@ export default function ContactSection() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 border border-blue-100 shadow-2xl hover:shadow-3xl transition-all duration-300">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Let’s Talk</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                "Keen to explore new opportunities, brainstorm ideas, or geek out over tech? Let’s chat—drop me a message anytime!"
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl p-8 border border-blue-100 dark:border-gray-700 shadow-2xl dark:shadow-xl dark:shadow-gray-900/20 hover:shadow-3xl transition-all duration-300">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">Let's Talk</h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed transition-colors duration-300">
+                "Keen to explore new opportunities, brainstorm ideas, or geek out over tech? Let's chat—drop me a message anytime!"
               </p>
               <div className="space-y-6">
                 {contactMethods.map((method, i) => (
@@ -240,18 +240,18 @@ export default function ContactSection() {
                     href={method.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center p-4 bg-white rounded-xl hover:bg-blue-50 border border-blue-100 hover:border-blue-200 transition-all duration-300"
+                    className="group flex items-center p-4 bg-white dark:bg-gray-700 rounded-xl hover:bg-blue-50 dark:hover:bg-gray-600 border border-blue-100 dark:border-gray-600 hover:border-blue-200 dark:hover:border-gray-500 transition-all duration-300"
                   >
                     <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-lg flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform duration-300`}>
                       {method.icon}
                     </div>
                     <div>
-                      <h3 className="text-gray-900 font-semibold group-hover:text-blue-500 transition-colors duration-200">
+                      <h3 className="text-gray-900 dark:text-white font-semibold group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-200">
                         {method.title}
                       </h3>
-                      <p className="text-gray-500 text-sm">{method.value}</p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm transition-colors duration-300">{method.value}</p>
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 ml-auto opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 ml-auto opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
