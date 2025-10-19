@@ -2,6 +2,25 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectsSection() {
   const projects = [
+     {
+      title: "👗 Area51 – Clothing Website",
+      description:
+        "BloodUnity is a web-based system that streamlines the blood donation process by enabling hospitals to manage  donors, staff, appointments, and inventory efficiently. Donors can register, track donation history, and receive noti f  ications, while hospital staff can monitor blood stocks and manage appointments, improving operational efficiency  and patient care.",
+      technologies: ["React", "Tailwind CSS", "JavaScript","Mongodb"],
+      githubLink:
+        "https://github.com/rukshanyomal11/Area51.git",
+      image: "/assets/images/area51.png",
+    },
+    {
+      title: "🚌 BusBooking – Ticket Booking App",
+      description:
+        "Developed a full-stack bus ticket booking application that allows users to view schedules, select seats in real-time,  book tickets, and receive automated confirmations, while providing admins with comprehensive tools to manage  buses, routes, and bookings, streamlining operations and enhancing customer experience across the system.",
+      technologies: ["React", "Tailwind CSS", "JavaScript","Mongodb"],
+      githubLink:
+        "https://github.com/rukshanyomal11/BusBooking.git",
+      image: "/assets/images/bus.png",
+    },
+   
     {
       title: "🔷 Web Conference Management System",
       description:
@@ -10,25 +29,7 @@ export default function ProjectsSection() {
       githubLink:
         "https://github.com/rukshanyomal11/Web-Based-Conference-Day-Management-System.git",
       image: "/assets/images/conference.png",
-    },
-    {
-      title: "🩸 Blood Donation Management System",
-      description:
-        "BloodUnity is a web-based app that simplifies and manages blood donations for hospitals and donors. It lets administrators manage staff, stock levels, and track donors, while donors can book appointments and view history.",
-      technologies: ["HTML", "PHP", "JavaScript", "CSS", "MySQL"],
-      githubLink:
-        "https://github.com/rukshanyomal11/BloodUnity-Blood-Donation-Management-System.git",
-      image: "/assets/images/blood.png",
-    },
-    {
-      title: "💼 Portfolio Website",
-      description:
-        "A modern responsive personal portfolio built using React and Tailwind CSS. It highlights my skills, projects, and experience with smooth animations and a user-friendly layout.",
-      technologies: ["React", "Tailwind CSS", "JavaScript"],
-      githubLink:
-        "https://github.com/rukshanyomal11/React-Portfolio-Website-with-HCI-Principles.git",
-      image: "/assets/images/portfolio.png",
-    },
+    }
   ];
 
   return (
